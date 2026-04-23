@@ -14,5 +14,13 @@ namespace W4Activity
 
         [Tooltip("[Optional] The dialogue options for the player's response, and what node each response leads to.")]
         public List<PlayerReplyW4> ReplyOptions;
-    }
+
+        [Tooltip("[Optional] A sprite to show when this dialogue node is reached.")]
+        public Sprite DialogueSprite;
+
+        public Sprite GetDialogueSprite()
+        {
+            return DialogueSprite;
+        }
+}
 }

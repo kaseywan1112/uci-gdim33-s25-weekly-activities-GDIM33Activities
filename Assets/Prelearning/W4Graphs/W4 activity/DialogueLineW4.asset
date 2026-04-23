@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87814806be98455aa06d85e22ad29d6, type: 3}
+  m_Name: DialogueLineW4
+  m_EditorClassIdentifier: 
+  Line: Ahlala
+  ReplyOptions:
+  - line: 'do you wanna boba? '
+    nextNode: {fileID: 11400000, guid: 4c0a69805ed5fc44e8da46c1274923a3, type: 2}
+  - line: what do you want for dinner?
+    nextNode: {fileID: 11400000, guid: 273ad8b6f548c2745b35377c1444af20, type: 2}
+  - line: Yo what you want?
+    nextNode: {fileID: 11400000, guid: b556efd1d12666c4ca0dbf8bcf93e623, type: 2}
+  - line: ....
+    nextNode: {fileID: 11400000, guid: 4b70efef551a73b4099e327eba38c091, type: 2}
+  DialogueSprite: {fileID: 0}
