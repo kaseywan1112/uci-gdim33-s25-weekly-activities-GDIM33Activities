@@ -26,3 +26,16 @@ Updated BreakDown <img width="1602" height="1111" alt="BreakDown" src="https://g
 
 ## W4
 ### Activity 1
+1. I have one scene in the game. The player plays as a ghost character, and the ghost already has its own animations. The player can move by left-clicking with the mouse. There is also one NPC in the scene. When the player gets close to the NPC, a message will appear that says “Press Space to Talk.” When the player presses the space bar, they will have a dialogue with the NPC and cannot move. Then, after pressing the Continue button, the player can move normally again.
+2. My goal for today’s playtesting is to check if my game has any bugs. I also want to test whether the movement feels smooth or uncomfortable to control. Another thing I want to check is whether the character’s collision size is working correctly, and if the player gets stuck on objects or weirdly runs into things.
+3. Play Tester: Haoyi Zhang, Pengcheng Qi, Zhengfan Yang, and Allen Gu. They tested my game and gave me some feedback on it. There were no major problems in the game overall. The game worked pretty well for now. I have received one feedback that the buttons in the dialogue system could be improved and made a little better. They also suggested adding character portraits in the dialogue or highlighting the person who is currently talking.
+
+
+### Activity 2
+1. I
+2. I
+3. I
+
+.. 
+
+
