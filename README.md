@@ -32,10 +32,12 @@ Updated BreakDown <img width="1602" height="1111" alt="BreakDown" src="https://g
 
 
 ### Activity 2
-1. I
-2. I
-3. I
+1. I think a writer can add the text they want very easily. They just need to know where to add the dialogue line and where to add the reply options, and then they can do it without much difficulty. They only need to add the text and the replies they want. Basically, most or all of the writing can be done without changing the code.
+2. I think there is almost no limit. The only real limit might be the UI layout for the reply options. If there are too many options on the screen, then you may need to redesign or rearrange the UI. But in terms of dialogue depth and how many layers the conversation can have, I do not think there is really a limit.
+3. The “Regenerate Nodes” button refreshes the nodes that we need in Visual Scripting. For example, when we add something new to the code, we may need to regenerate the nodes so Unity can show the new nodes we want to use. In this class activity, I regenerated the nodes at least three times to get the nodes I needed.
 
-.. 
+#### Extra Credit:
+<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/8a16d29f-11ea-4bc4-a363-1e1e300ee934" />
+
 
 
