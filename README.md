@@ -39,5 +39,36 @@ Updated BreakDown <img width="1602" height="1111" alt="BreakDown" src="https://g
 #### Extra Credit:
 <img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/8a16d29f-11ea-4bc4-a363-1e1e300ee934" />
 
+## W5
+### Activity 1
+
+I decided to build a branching dialogue system using ScriptableObjects and Visual Scripting, since I already have my basic dialogue UI and State Machine set up. 
+
+Step 1:
+1. Make a DialogueNode C# script (inheriting from ScriptableObject) to hold the npcText and an array for DialogueOptions.
+2. Drop a currentNode object variable in the Blackboard so the graph knows exactly where we are in the convo.
+3. In the Dialogue State graph, grab the NPC text from the variable and plug it straight into the Canvas UI Set Text node.
+
+(test: Run the game, walk up to the NPC, hit Spacebar, and check if my custom text)
+
+Step 2:
+1. Duplicate my UI buttons so there are 4 option buttons on the Canvas, and register their Text components in the Blackboard.
+2. In the graph, pull the Options array from the currentNode. Use List: Get Item (Index 0) to grab the first option's reply text, and feed it to the first button.
+3. Copy and paste this logic for Index 1, 2, and 3, routing them to the remaining three buttons.
+
+(Test: Run the game and check if all 4 buttons successfully display the custom joke replies)
+
+Step 3:
+1. Hook up an On Button Click event node to the first button GameObject.
+2. When clicked, extract the Next Node from Index 0 of the Options array, and use a Set Variable node to overwrite the currentNode on the Blackboard.
+3. Drag the execution flow All the way back to the start of the UI text sequence to refresh the whole screen.
+
+(Test: Run the game, click the first option button, and test if the screen refreshes to show the next completely different DialogueNode.) 
+
+
+### Activity 2
+
+For today's class, I made the integrated ScriptableObjects into my Visual Scripting graphs to create a working branching dialogue system. I managed to get the data flowing perfectly: when the player interacts with the cow NPC, the graph correctly reads the ScriptableObject, updates the main NPC text, and extracts an array of choices to populate my 4 UI buttons. So far so good!
+
 
 
