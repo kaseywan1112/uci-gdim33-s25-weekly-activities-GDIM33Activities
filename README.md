@@ -70,5 +70,26 @@ Step 3:
 
 For today's class, I made the integrated ScriptableObjects into my Visual Scripting graphs to create a working branching dialogue system. I managed to get the data flowing perfectly: when the player interacts with the cow NPC, the graph correctly reads the ScriptableObject, updates the main NPC text, and extracts an array of choices to populate my 4 UI buttons. So far so good!
 
+## W6
+### Activity 1
+[Milestone 2 Itch link](https://kaseywan1112.itch.io/gdim33-milestone2)
 
+What's now in my build and play test goal:
 
+In Milestone 1, my game had movement using the NavMesh system. The player can click on the ground with the mouse, and the character will move through the NavMesh. I also had a simple inventory system. When the player gets close to an item, they can press Space to pick it up, and the item will go into the inventory. I also had a simple dialogue system where the player could talk to an NPC, but the dialogue was still very basic. For the new build, I finished a branching dialogue system. Now, when the player talks to an NPC, the dialogue can show the speaker’s portrait and name. I also wrote code so I can choose whether the dialogue is just one line or a branching dialogue with option buttons.
+
+Since I only have a test scene, my playtest goal is to test if the movement, item pickup, and branching dialogue feel clear and smooth.
+
+PlayTest Note: 
+
+During the playtest, players did not really need my hints to understand how to play the game. They could follow the game flow normally, so I think the main gameplay process is working. However, the game still has some bugs and problems that I need to fix.
+
+1. If the player clicks on the character instead of the floor, the character will keep moving toward the camera. I need to make the player character not detectable by the movement raycast.
+2. I need to make the camera more top-down. Since my game uses click-to-move on the floor, players need to click the ground easily. Right now, the camera angle makes it a little hard to click the floor, so I should move the camera higher.
+3. I need to adjust the interaction buttons. Right now, Space is used for dialogue and interaction, but I think I should separate them more clearly. For example, Space can be used for dialogue, and E or F can be used for item interaction. This will make the controls clearer for players.
+
+### Activity 2
+1. Because RGB values are stored between 0.0 and 1.0, when we use Multiply, the final color value will usually become smaller. For example, if we multiply 0.8 by 0.5, the result is 0.4. This is why the color becomes darker and less saturated.
+2. If we use Multiply to combine Alpha values, the result will become more translucent. This is because Alpha values are also between 0.0 and 1.0, so multiplying them will usually make the final Alpha value smaller than the original values.
+3. The shader gets the UV values from the model’s vertex data. Each vertex has its own UV coordinates, and Unity uses them to determine where the texture should be applied to the model.
+4. I think it is interesting because we can use numbers to find the same color more accurately. Different screens or graphics settings may display colors slightly differently, but if we use the same RGB values, we can still find the corresponding color in the shader. This makes color feel more controllable and not just based on what we see with our eyes.
