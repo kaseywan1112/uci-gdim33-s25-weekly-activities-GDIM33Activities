@@ -93,3 +93,14 @@ During the playtest, players did not really need my hints to understand how to p
 2. If we use Multiply to combine Alpha values, the result will become more translucent. This is because Alpha values are also between 0.0 and 1.0, so multiplying them will usually make the final Alpha value smaller than the original values.
 3. The shader gets the UV values from the model’s vertex data. Each vertex has its own UV coordinates, and Unity uses them to determine where the texture should be applied to the model.
 4. I think it is interesting because we can use numbers to find the same color more accurately. Different screens or graphics settings may display colors slightly differently, but if we use the same RGB values, we can still find the corresponding color in the shader. This makes color feel more controllable and not just based on what we see with our eyes.
+
+
+## W7
+### Activity 1
+1. The data comes from the color data stored in each vertex of the Shiba mesh. The Vertex Color node is basically reading that color information from the mesh.
+2. The color is blended because the shader interpolates the color between the vertices on each polygon. So the edge between two colors does not look perfectly sharp.
+3. Vertex color is less detailed because the color only exists on the vertices, not every pixel like a texture. So it depends a lot on how many vertices the mesh has. I think vertex color is useful for simple color masks, stylized models, cheap color variation, or debugging.
+4. Yes, the back-left leg looks a little wrong. The color looks darker or different there, so that part may have incorrect or inconsistent normals.
+5. We could use a debug shader to test UV data. For example, we can show UV values as colors to see if the UVs are stretched, flipped, or not lined up correctly. This would help when a texture looks wrong on the model.
+6. The lighting looks wrong because the light direction and the surface normals are facing opposite directions. Because of that, the dot product gives a negative value, so the part that should be bright becomes dark. After we multiply the light direction by -1, the lighting works correctly.
+7. We set the Blend Mode to Additive because fire should look bright and glowing. Additive blending makes the bright parts stronger and makes the dark parts almost disappear, so it works better for a fire effect.
