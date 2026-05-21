@@ -104,3 +104,24 @@ During the playtest, players did not really need my hints to understand how to p
 5. We could use a debug shader to test UV data. For example, we can show UV values as colors to see if the UVs are stretched, flipped, or not lined up correctly. This would help when a texture looks wrong on the model.
 6. The lighting looks wrong because the light direction and the surface normals are facing opposite directions. Because of that, the dot product gives a negative value, so the part that should be bright becomes dark. After we multiply the light direction by -1, the lighting works correctly.
 7. We set the Blend Mode to Additive because fire should look bright and glowing. Additive blending makes the bright parts stronger and makes the dark parts almost disappear, so it works better for a fire effect.
+
+
+## W8
+### Activity 1
+[milestone3](https://kaseywan1112.itch.io/gdim33-milestone-3)
+
+What's new in my build and play test goal:
+Since Milestone 2, my game is no longer just a test scene; it now includes a complete map. I added 2 timeline animations and improved the dialogue system; it now has branching dialogue and character images during conversation. I also made the camera movement smoother. When the camera detects an object blocking the view between the camera and the player, that object will temporarily become hidden. I also changed the character’s NavMesh setup, so the movement feels better than before.
+
+For this playtest goal, my main goal is to see whether players act as I expect. I also want to check if there are any bugs while they are playing. Another goal is to see if players can understand the jokes and memes and get the humor in the game.
+
+PlayTest Note: 
+
+The playtest went smoothly overall, and so far, the game feels good. I still need to make the highlight on the interactable objects make it more obvious and maybe improve the text above the character’s head.
+
+### Activity 2A
+1. I think we use the stencil buffer like a mask to decide where the outline can appear. The original Shiba writes a stencil value of 1 first, and then the outline pass checks the stencil value before drawing. Since the outline uses Not Equal, it will not draw on the pixels where the original Shiba already wrote 1. Because of that, the bigger outline version does not cover the real object, and it only shows around the outside of the Shiba.
+2. I think the Shiba is the object being drawn almost the same way twice. It is first drawn normally with its original material, and then it is drawn again by the outline render feature with the outline material. The second time, it is basically the same Shiba mesh, but slightly enlarged and colored differently, so it can create the outline around the original object. This is why it is a little inefficient, because Unity has to render the same object more than once for this effect.
+3. I think we use ADD instead of MULTIPLY because the different lighting sections are separate parts of the final color. One part is the shadow area, and another part is the lit area. We already use the Step node to split the lighting into different zones, so after that we need to put these zones back together. If we multiply them all together, the final color will become much darker, and the lit area and shadow area will affect each other too much. Using Add is more like combining the shadow part and the light part into one final cel-shaded result.
+4. I think changing the Shiba’s layer works because the outline Render Feature is only looking for objects on the Outline layer. When the mouse enters the Shiba, the Visual Scripting Graph changes the Shiba from Default to Outline, so the outline effect turns on. When the mouse exits, it changes the Shiba back to Default, so the outline Render Feature does not draw it anymore. Basically, we are not really turning the shader on and off directly. We are just moving the object in and out of the layer that the outline effect can see.
+
