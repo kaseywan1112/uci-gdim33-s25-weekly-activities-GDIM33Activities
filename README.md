@@ -125,3 +125,13 @@ The playtest went smoothly overall, and so far, the game feels good. I still nee
 3. I think we use ADD instead of MULTIPLY because the different lighting sections are separate parts of the final color. One part is the shadow area, and another part is the lit area. We already use the Step node to split the lighting into different zones, so after that we need to put these zones back together. If we multiply them all together, the final color will become much darker, and the lit area and shadow area will affect each other too much. Using Add is more like combining the shadow part and the light part into one final cel-shaded result.
 4. I think changing the Shiba’s layer works because the outline Render Feature is only looking for objects on the Outline layer. When the mouse enters the Shiba, the Visual Scripting Graph changes the Shiba from Default to Outline, so the outline effect turns on. When the mouse exits, it changes the Shiba back to Default, so the outline Render Feature does not draw it anymore. Basically, we are not really turning the shader on and off directly. We are just moving the object in and out of the layer that the outline effect can see.
 
+
+## W9
+### Activity 1
+<img width="1098" height="838" alt="WeChat Image_20260528022156" src="https://github.com/user-attachments/assets/a9ac2d34-ba09-4b6a-a245-a805513839fc" />
+To make War Thunder's internal structure s X-ray and mouse-over outline effects in Unity, we can split the vehicle model into an opaque internal structure  and a semi-transparent surface skin, rendered later with Transparent queue so that the former naturally shows through the translucent hull. For the highlight outline, we can detect the part with a raycast and draw its inflated mesh in a final pass after all transparent objects, using a queue like Overlay or by injecting it through a CommandBuffer at the AfterRenderingTransparents event to keep the contour sharp on top.
+
+### Activity 2
+<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/a2e6ee77-1726-4a61-bddb-c9a3de68f1f1" />
+
+Today I worked on the outline ShaderGraph for my vertical slice. I added OutlineColor and OutlineThickness, then used the object position and normal vector to push the mesh outward and create an outline shape. But I ran into a bug while setting up the camera/renderer pipeline, so I am still fixing how the effect appears in the Game view. The ShaderGraph is mostly done, but I still need to connect it correctly through the renderer settings.
