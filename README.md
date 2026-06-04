@@ -139,7 +139,7 @@ Today I worked on the outline ShaderGraph for my vertical slice. I added Outline
 
 ## W10
 ### Activity 1
-1. What's new in my build:
+What's new in my build:
   1. A new NPC - chicken
   2. A new timeline of chicken
   3. Genie shader
@@ -148,16 +148,16 @@ Today I worked on the outline ShaderGraph for my vertical slice. I added Outline
   7. Fixed a lot of bugs
   8. Interaction of the lamp
 
-2. [Itch Link](https://kaseywan1112.itch.io/gdim-33-milestone-4)
+ [Milestone 3 Itch Link](https://kaseywan1112.itch.io/gdim-33-milestone-4)
+ 
+For this playtest goal, my main goal is to see whether players act as I expect. I also want to check if there are any bugs while they are playing.
 
-3. For this playtest goal, my main goal is to see whether players act as I expect. I also want to check if there are any bugs while they are playing.
-
-4. I think the game guidance is not clear; most of the players don't know they need to rub the lamp. I will add more instructions for the player.
+Playtest Note: I think the game guidance is not clear; most of the players don't know they need to rub the lamp. I will add more instructions for the player.
 
 ### Activity 2
 Before we start coding, using a bubble map and task breakdown is really helpful for us. A bubble map helps us see the game as different systems, like the player, enemies, UI, items, levels, dialogue, and game rules. It also shows how these systems connect to each other, so we can understand what needs to be built before we actually start making it.
 
-After that, we can break each system into smaller tasks. For example, instead of only saying “make combat,” we can break it down into player attack, enemy health, damage feedback, sound effects, and UI changes. This makes the project feel more clear and less overwhelming. Planning also helps us understand the scope of our game. Sometimes an idea sounds simple, but after making a plan, we realize it needs many systems. So planning helps us control the scale of the project, avoid adding too much, and focus on the most important parts first.
+After that, we can break each system into smaller tasks. For example, instead of only saying “make combat,” we can break it down into player attack, enemy health, damage feedback, sound effects, and UI changes. This makes the project feel clearer and less overwhelming. Planning also helps us understand the scope of our game. Sometimes an idea sounds simple, but after making a plan, we realize it needs many systems. So planning helps us control the scale of the project, avoid adding too much, and focus on the most important parts first.
 
 ### Activity 3
 I added a dialogue that appears when the player enters the game, so they know what to do. I will add one more after they see the lamp, so they know they should rub it. I will work on the shader of the chicken coop later. 
